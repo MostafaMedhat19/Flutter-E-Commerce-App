@@ -33,7 +33,7 @@ class AccountServices {
   }
   static Future<void>loginData({required  email  , required password })async
   {
-    await dio.post('https://student.valuxapps.com/api/register' ,data:{'email':email , 'password': password } );
+    await dio.post('https://student.valuxapps.com/api/login' ,data:{'email':email , 'password': password } );
 
   }
 
