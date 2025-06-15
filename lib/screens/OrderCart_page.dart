@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/row_cart.dart';
-import 'PaypalWebviewPage.dart';
+import 'PaypalWebviewPage.dart'; // <--- import the widget
 
 class OrderCartPage extends StatelessWidget {
   final List<Map<String, dynamic>> orders;
@@ -36,8 +36,7 @@ class OrderCartPage extends StatelessWidget {
                   name: item['name'],
                   image: item['image'],
                   price: item['price'].toString(),
-                  onRemove: () {}, // Not functional in stateless
-                  onPayWithPayPal: null, // We'll use one PayPal button at the bottom
+                  orders: orders, onRemove: () {  },
                 );
               },
             ),
@@ -58,31 +57,10 @@ class OrderCartPage extends StatelessWidget {
                   textAlign: TextAlign.right,
                 ),
                 const SizedBox(height: 12),
-                ElevatedButton(
-                  onPressed: () {
-                    if (orders.isNotEmpty) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: () {}
-
-                        ),
-                      );
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text("Cart is empty")),
-                      );
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF003087),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                  ),
-                  child: const Text(
-                    "Pay with PayPal",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
+                // 👇 Use the new reusable PayPal button
+                PaypalPaymentButton(
+                  orders: orders,
+                  totalPrice: totalPrice,
                 ),
               ],
             ),

@@ -15,7 +15,7 @@ class RowCart extends StatelessWidget {
     required this.price,
     required this.image,
     required this.onRemove,
-    this.onPayWithPayPal, // optional
+    this.onPayWithPayPal, required List<Map<String, dynamic>> orders, // optional
   });
 
   @override
