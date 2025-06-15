@@ -4,6 +4,7 @@ import 'package:mostafamedhatmostafa0522019/screens/registration_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+
   runApp(const MyApp());
 }
 

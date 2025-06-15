@@ -37,7 +37,7 @@ class HomeItems extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.network( providerObject.dataProducts?.productsData[index]['image']),
+                      Image.network( providerObject.dataProducts?.productsData[index]['imageUrl']),
 
                       Text(providerObject.dataProducts?.productsData[index]['name'], style:const TextStyle(
                         fontWeight: FontWeight.bold,

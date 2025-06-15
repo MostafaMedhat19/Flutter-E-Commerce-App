@@ -10,17 +10,23 @@ class AccountProvider extends ChangeNotifier
   ProductModel? dataProducts ;
   Future<void>Registration( {required  name  , required password , required phone ,required email })async
   {
-     await AccountServices.registrationData(name: name, password: password, phone: phone, email: email);
-     notifyListeners();
+    modl=  await AccountServices.registrationData(name: name, password: password, phone: phone, email: email);
+    status = modl?.status;
+    notifyListeners();
   }
 
 
-  Future<void>Login({required  email  , required password })async
-  {
 
-    await AccountServices.loginData(email: email, password: password);
-    status = modl?.status;
-    notifyListeners();
+
+  Future<void> Login({required email, required password}) async {
+    try {
+      modl = await AccountServices.loginData(email: email, password: password);
+      status = modl?.status;
+      notifyListeners();
+    } catch (e) {
+      print("Login Error: $e");
+      rethrow;
+    }
   }
 
 
