@@ -7,13 +7,7 @@ This app showcases product listing, authentication with Firebase, and integrated
 
 ## 📱 Screenshots
 
-| Home Page | Product List | Product Details | Sign Up | Login |
-|-----------|--------------|------------------|---------|-------|
-| ![Home](https://github.com/user-attachments/assets/f50d5e8a-b1e5-4f00-94cc-a219e1eb81fd) | ![List](https://github.com/user-attachments/assets/8a86c983-baf6-4842-85b1-c23f30dcd422) | ![Details](https://github.com/user-attachments/assets/456ce525-0154-44be-a889-9ff4dd2bb394) | ![SignUp](https://github.com/user-attachments/assets/a50d2acd-8ec3-46f7-98b2-d11a18167466) | ![Login](https://github.com/user-attachments/assets/9f250501-506d-4b56-8b44-d667076737e8) |
-
-| Checkout / PayPal Page |
-|------------------------|
-| ![image](https://github.com/user-attachments/assets/0ba7bb75-ebc4-4a31-af25-6e8578621293)|
+<table align="center"> <tr> <th>Home Page</th> <th>Product List</th> <th>Product Details</th> <th>Sign Up</th> <th>Login</th> <th>Checkout / PayPal</th> </tr> <tr> <td><img src="https://github.com/user-attachments/assets/f50d5e8a-b1e5-4f00-94cc-a219e1eb81fd" width="150"/></td> <td><img src="https://github.com/user-attachments/assets/8a86c983-baf6-4842-85b1-c23f30dcd422" width="150"/></td> <td><img src="https://github.com/user-attachments/assets/456ce525-0154-44be-a889-9ff4dd2bb394" width="150"/></td> <td><img src="https://github.com/user-attachments/assets/a50d2acd-8ec3-46f7-98b2-d11a18167466" width="150"/></td> <td><img src="https://github.com/user-attachments/assets/9f250501-506d-4b56-8b44-d667076737e8" width="150"/></td> <td><img src="https://github.com/user-attachments/assets/0ba7bb75-ebc4-4a31-af25-6e8578621293" width="150"/></td> </tr> </table>
 
 > 📸 Place your screenshots inside the `screenshots/` or `assets/` folder and update the paths above.
 
@@ -40,5 +34,6 @@ Easily pass the cart total and redirect users to PayPal for secure payment.
 
 🔑 Add your **Client ID** in the appropriate place:
 
-```html
-<script src="https://www.paypal.com/sdk/js?client-id=AWkIHQeACTJbHcq1plYgjtwj2fObzE0p6LMLnTnLjtJb8E2FqrtRfe4UdbwvjDX9Z8CWBTXivcJ6oXpS&currency=USD"></script>
+```Flutter
+  clientId: "XXXXXXX",
+  secretKey: "XXXXXX",
